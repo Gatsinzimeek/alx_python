@@ -1,6 +1,8 @@
-#here is how it working
+output = ""
 for n in range(100):
     if n < 10:
-        print(f"0{.str(n)},")
+        output += f"0{n},"
     else:
-        print (f"{.str(n)},")
+        output += f"{n},"
+
+print(output.rstrip(","))
