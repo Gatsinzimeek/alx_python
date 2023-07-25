@@ -1,2 +1,5 @@
 for n in range(100):
-    print("{:02d}".format(n), end=", " if n < 99 else "\n")
+    if n < 10:
+        print(f"0{str(n)},")
+    else:
+        print (f"{str(n)},")
