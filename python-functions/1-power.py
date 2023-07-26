@@ -7,6 +7,8 @@ def pow(a,b):
             Expon *= a
         return Expon
     else:
-        for _ in range(b):
+        for _ in range(abs(b)):
             Expon *= a
         return 1/Expon
+    
+print(powe(10, -2))
