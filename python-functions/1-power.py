@@ -10,5 +10,3 @@ def pow(a,b):
         for _ in range(abs(b)):
             Expon *= a
         return 1/Expon
-    
-print(powe(10, -2))
