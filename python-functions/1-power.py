@@ -1,4 +1,4 @@
-def powe(a,b):
+def pow(a,b):
     Expon = 1
     if b==0:
         return 1
