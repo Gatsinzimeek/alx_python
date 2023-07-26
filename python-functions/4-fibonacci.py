@@ -12,4 +12,3 @@ def fibonacci_sequence(n):
         fibonacci_number.append(nextNumber)
 
     return fibonacci_number
-
