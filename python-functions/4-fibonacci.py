@@ -13,4 +13,3 @@ def fibonacci_sequence(n):
 
     return fibonacci_number
 
-print(fibonacci_sequence(6))
