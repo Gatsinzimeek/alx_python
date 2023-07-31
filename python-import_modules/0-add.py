@@ -1,7 +1,7 @@
 from add_0 import add
-def addition:
+if __name__ == "__main__":
   a = 1
   b = 2
   result = add(a,b)
 
-  return(f"{a} + {b} = {str(result)}")
+  print(f"{a} + {b} = {str(result)}")
