@@ -1,6 +1,7 @@
 from add_0 import add
-a = 1
-b = 2
-result = add(a,b)
+def addition:
+  a = 1
+  b = 2
+  result = add(a,b)
 
-print(f"{a} + {b} = {str(result)}")
+  return(f"{a} + {b} = {str(result)}")
