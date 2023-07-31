@@ -1,12 +1,9 @@
 def safe_print_division(a,b):
-    int(a)
-    int(b)
-    if b == 0:
+    try:
+        result = a / b
+    except ZeroDivisionError:
         return None
-    else:
-        try:
-            result = a / b
-            return result
-        except ValueError:
-            return("Invalid: please enter valid integers")
+    finally:
+        print("Inside result: {}".format(result))
+        return result
         
