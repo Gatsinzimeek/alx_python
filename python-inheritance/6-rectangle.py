@@ -1,4 +1,19 @@
 """
+Module containing the Rectangle class.
+"""
+class OverrideMetaClass(type):
+    """def __new__(cls, name, bases, attrs):
+        # Customize the class creation process here
+        return super().__new__(cls, name, bases, attrs)"""
+
+    def __dir__(cls):
+        """
+        Returns:
+            list: List of attributes excluding __init_subclass__.
+        """
+        return [attribute for attribute in
+                super().__dir__() if attribute != '__init_subclass__']
+"""
 This is a a creation of BaseGeometry 
 """
 class BaseGeometry:
@@ -16,7 +31,7 @@ class BaseGeometry:
         if value <= 0:
             raise Exception(f"{name} must be greater than 0")
         
-class Rectangle(BaseGeometry):
+class Rectangle(BaseGeometry,metaclass=OverrideMetaClass):
     """
     This is a a class generate rectangle based on parentclass
     args(,name)
