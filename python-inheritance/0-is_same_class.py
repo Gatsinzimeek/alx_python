@@ -1,5 +1,5 @@
 """
-This is a module for performing instance checking 
+This is a method for performing instance checking 
 """
 def is_same_class(obj, a_class):
     """
@@ -13,7 +13,4 @@ def is_same_class(obj, a_class):
     True if is an instance 
     False if is not and instance
     """
-    if isinstance(obj,a_class):
-        return True
-    else:
-        return False
+    return type(obj) is a_class
