@@ -24,7 +24,16 @@ class BaseGeometry(metaclass=OverrideMetaClass):
     integer validator args(value,name)
     These function must raise an exception 
     """ 
-    
+    def __dir__(cls) -> None:
+        """
+        control access to some inherited attributes
+        """
+        attributes = super().__dir__()
+        n_attributes = []
+        for attr in attributes:
+            if attr != '__init_subclass__':
+                n_attributes.append(attr)
+        return n_attributes
     def area(self):
         raise Exception("area() is not implemented")
     def integer_validator(self, name, value):
