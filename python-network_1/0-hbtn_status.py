@@ -1,6 +1,9 @@
+"""
+Make a get request to a webpage
+"""
 import requests
 
-resp = requests.get('https://alu-intranet.hbtn.io/status')
-
-print(f'- type: {type(resp.content)}$')
-print(f'- content: {resp.text}$')
+response = requests.get('https://alu-intranet.hbtn.io/status')
+print("Body response:")
+print("\t- type: {}\n"
+      "\t- content: {}".format(type(response.text), response.text))
